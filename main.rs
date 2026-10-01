@@ -1,15 +1,16 @@
 fn main() {
-    let app_name = "Rust Learning Project";
-    let version = 1;
-    let is_active = true;
+    let score = 85;
 
-    println!("Welcome to {} (Version {})", app_name, version);
-    println!("Status Active: {}", is_active);
+    // Condition Check
+    if score >= 80 {
+        println!("Pass! Aapne boht badiya perform kiya.");
+    } else if score >= 50 {
+        println!("Pass! Aap average hain.");
+    } else {
+        println!("Fail! Aapko aur mehnat ki zaroorat hai.");
+    }
 
-    let result = add_numbers(5, 10);
-    println!("5 + 10 ka result hai: {}", result);
-}
-
-fn add_numbers(a: i32, b: i32) -> i32 {
-    a + b
+    // Rust feature: if ko direct variable mein save kar sakte hain
+    let status = if score >= 50 { "PASSED" } else { "FAILED" };
+    println!("Final Status: {}", status);
 }
